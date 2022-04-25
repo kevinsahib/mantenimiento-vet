@@ -17,4 +17,9 @@ class ColorSelect {
   static const Color texButton2 = Color(0xFF76a757);
 
   static const Color borderContainer = Color(0xFF76a757);
+  static const Color buttoof = Color(0xff324fa5);
+  static const Color buttoog = Color(0xff64686f);
+
+  static const Color buttoov = Color(0xf76aa757);
+  static const Color btnblack = Color.fromARGB(255, 17, 17, 17);
 }
