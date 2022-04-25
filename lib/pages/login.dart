@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mvp_all/pages/recuperarPass.dart';
+import 'package:mvp_all/pages/editarD.dart';
 import 'package:mvp_all/pages/resgistro.dart';
 import 'package:mvp_all/styles/colors/colors_views.dart';
 
@@ -189,7 +189,7 @@ class _ContentBodyState extends State<ContentBody> {
             ),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const recuperPass()));
+                  MaterialPageRoute(builder: (context) => const editarrD()));
             },
           ),
         ),

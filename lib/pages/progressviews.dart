@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mvp_all/pages/resgistro.dart';
 import 'package:mvp_all/pages/Home.dart';
 import 'package:mvp_all/pages/login.dart';
-import 'package:mvp_all/pages/recuperarPass.dart';
+import 'package:mvp_all/pages/editarD.dart';
 import 'package:mvp_all/painter/progresspainters.dart';
 
 class ProgressView extends StatefulWidget {

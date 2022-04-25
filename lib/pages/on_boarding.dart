@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:mvp_all/pages/Home.dart';
-import 'package:mvp_all/pages/progressviews.dart';
+import 'package:mvp_all/pages/.dart';
 import 'package:mvp_all/styles/colors/colors_views.dart';
 
 class OnBoarding extends StatefulWidget {
