@@ -108,7 +108,7 @@ class _ContentBodyState extends State<ContentBody> {
               alignment: Alignment.topLeft,
               margin: const EdgeInsets.only(left: 2, bottom: 5),
               child: const Text(
-                'Nombre',
+                'Nombre del dueño',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),
@@ -172,7 +172,7 @@ class _ContentBodyState extends State<ContentBody> {
               alignment: Alignment.topLeft,
               margin: const EdgeInsets.only(left: 2, bottom: 5),
               child: const Text(
-                'Numero del dueño',
+                'Numero telefonico',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),

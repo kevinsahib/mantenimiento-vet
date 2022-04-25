@@ -37,7 +37,7 @@ class registroo extends StatelessWidget {
                     SizedBox(
                       width: 220,
                       child: Text(
-                        'Regístrate',
+                        'Regístro',
                         style: TextStyle(
                           fontWeight: FontWeight.w300,
                         ),
@@ -69,7 +69,7 @@ class registroo extends StatelessWidget {
                 height: 40,
                 margin: const EdgeInsets.only(top: 30),
                 child: const Text(
-                  'Crea una cuenta para empezar usar la app',
+                  'Registrar el dueño',
                   style: TextStyle(
                       fontSize: 16,
                       color: ColorSelect.btnTextBo1,
@@ -100,7 +100,7 @@ class _ContentBodyState extends State<ContentBody> {
   Widget build(BuildContext context) {
     return Column(children: [
       Container(
-        height: 310,
+        height: 420,
         width: 350,
         margin: const EdgeInsets.only(top: 40),
         child: ListView(
@@ -109,7 +109,7 @@ class _ContentBodyState extends State<ContentBody> {
               alignment: Alignment.topLeft,
               margin: const EdgeInsets.only(left: 2, bottom: 5),
               child: const Text(
-                'Nombre',
+                'Nombre del dueño',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),
@@ -119,7 +119,7 @@ class _ContentBodyState extends State<ContentBody> {
               margin: const EdgeInsets.only(bottom: 10),
               child: TextFormField(
                 decoration: InputDecoration(
-                  labelText: 'Nombre completo',
+                  labelText: '',
                   labelStyle: const TextStyle(
                     color: ColorSelect.btnTextBo1,
                   ),
@@ -151,7 +151,7 @@ class _ContentBodyState extends State<ContentBody> {
               margin: const EdgeInsets.only(bottom: 10),
               child: TextFormField(
                 decoration: InputDecoration(
-                  labelText: 'Dirección correo',
+                  labelText: '',
                   labelStyle: const TextStyle(
                     color: ColorSelect.btnTextBo1,
                   ),
@@ -173,18 +173,17 @@ class _ContentBodyState extends State<ContentBody> {
               alignment: Alignment.topLeft,
               margin: const EdgeInsets.only(left: 2, bottom: 5),
               child: const Text(
-                'Contraseña',
+                'Numero telefonico',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(
+            Container(
               width: 350,
               height: 70,
-              child: TextField(
-                obscureText: visible,
-                obscuringCharacter: '*',
+              margin: const EdgeInsets.only(bottom: 10),
+              child: TextFormField(
                 decoration: InputDecoration(
-                  labelText: 'Contraseña',
+                  labelText: '',
                   labelStyle: const TextStyle(
                     color: ColorSelect.btnTextBo1,
                   ),
@@ -195,15 +194,6 @@ class _ContentBodyState extends State<ContentBody> {
                       width: 1.5,
                     ),
                   ),
-                  suffixIcon: IconButton(
-                    onPressed: () {
-                      setState(() {
-                        visible = !visible;
-                      });
-                    },
-                    icon:
-                        Icon(visible ? Icons.visibility_off : Icons.visibility),
-                  ),
                 ),
                 style: const TextStyle(
                   fontSize: 16,
@@ -211,114 +201,37 @@ class _ContentBodyState extends State<ContentBody> {
                 ),
               ),
             ),
-          ],
-        ),
-      ),
-      Container(
-        width: 340,
-        height: 50,
-        margin: const EdgeInsets.only(left: 17),
-        child: const Text(
-          'La contraseña debe contener caracteres, números y símbolos con un mínimo de 6 caracteres.',
-          style: TextStyle(
-            color: ColorSelect.btnTextBo1,
-          ),
-        ),
-      ),
-      Container(
-        width: 350,
-        height: 50,
-        margin: const EdgeInsets.only(left: 26, right: 75),
-        child: Row(
-          children: [
-            Row(
-              children: [
-                Container(
-                  width: 15,
-                  height: 30,
-                  margin: const EdgeInsets.only(right: 18, bottom: 14),
-                  child: Checkbox(
-                      value: value,
-                      side: const BorderSide(
-                        color: ColorSelect.btnTextBo1,
-                        width: 1.5,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      onChanged: (bool? valueNew) {}),
-                )
-              ],
+            Container(
+              alignment: Alignment.topLeft,
+              margin: const EdgeInsets.only(left: 2, bottom: 5),
+              child: const Text(
+                'Dirección del dueño',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
             ),
-            Row(
-              children: [
-                SizedBox(
-                  height: 50,
-                  child: Row(
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              const Text(
-                                'Al registrarme, acepto los',
-                                style: TextStyle(fontSize: 15),
-                              ),
-                              InkWell(
-                                onTap: () {
-                                  Route route = MaterialPageRoute(
-                                      builder: (context) => const homeinit());
-                                  Navigator.push(context, route);
-                                },
-                                child: const Text(
-                                  ' términos y',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    color: ColorSelect.paginatorNext,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: const [
-                              InkWell(
-                                child: Text(
-                                  'condiciones',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    color: ColorSelect.paginatorNext,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                              InkWell(
-                                child: Text(
-                                  ' y la',
-                                  style: TextStyle(fontSize: 15),
-                                ),
-                              ),
-                              InkWell(
-                                child: Text(
-                                  ' política de privacidad',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    color: ColorSelect.paginatorNext,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ],
+            Container(
+              width: 350,
+              height: 70,
+              margin: const EdgeInsets.only(bottom: 10),
+              child: TextFormField(
+                decoration: InputDecoration(
+                  labelText: '',
+                  labelStyle: const TextStyle(
+                    color: ColorSelect.btnTextBo1,
                   ),
-                )
-              ],
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: const BorderSide(
+                      color: ColorSelect.btnTextBo1,
+                      width: 1.5,
+                    ),
+                  ),
+                ),
+                style: const TextStyle(
+                  fontSize: 16,
+                  color: ColorSelect.btnTextBo1,
+                ),
+              ),
             ),
           ],
         ),
@@ -338,40 +251,10 @@ class _ContentBodyState extends State<ContentBody> {
                 borderRadius: BorderRadius.circular(30),
               )),
           child: const Text(
-            'Crear Cuenta',
+            'Guardar registro',
             style: TextStyle(fontSize: 18),
           ),
         ),
-      ),
-      Container(
-        width: 300,
-        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Container(
-            child: const Text(
-              '¿Ya tienes una cuenta? ',
-              style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
-                  color: ColorSelect.btnblack),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          InkWell(
-            child: const Text(
-              'Iniciar sesion',
-              style: TextStyle(
-                fontSize: 14,
-                color: ColorSelect.paginatorNext,
-                fontWeight: FontWeight.bold,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const loginn()));
-            },
-          ),
-        ]),
       ),
     ]);
   }
